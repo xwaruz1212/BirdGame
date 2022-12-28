@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    width: 800px;
+    height: 800px;
+    border: 3px solid black;
+    margin: auto;
+    background-color: aqua;
+}
+
+#block{
+    height: 800px;
+    width: 80px;
+    background-color: green;
+    position: relative;
+    left: 720px;
+    animation: fence 3s infinite linear;
+}
+
+@keyframes fence{
+    0%{left: 720px}
+    100%{left: 0px}
+}
+
+#gap{
+    width: 80px;
+    height: 200px;
+    background-color: aqua;
+    position: relative;
+    left: 720px;
+    top: -600px;
+    animation: fence 3s infinite linear;
+}
