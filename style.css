@@ -43,10 +43,13 @@
 }
 
 #character {
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 100px;
+    top: 200px;
 }
 
 img {
     max-width: 70px;
+    max-height: 70px;
 }
