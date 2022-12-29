@@ -1,36 +1,52 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
-#game{
+#game {
     width: 800px;
     height: 800px;
     border: 3px solid black;
     margin: auto;
     background-color: aqua;
+    overflow: hidden;
 }
 
-#block{
+#block {
     height: 800px;
     width: 80px;
     background-color: green;
     position: relative;
     left: 720px;
-    animation: fence 3s infinite linear;
+    animation: fence 2s infinite linear;
 }
 
-@keyframes fence{
-    0%{left: 720px}
-    100%{left: 0px}
+@keyframes fence {
+    0% {
+        left: 800px
+    }
+
+    100% {
+        left: -100px
+    }
 }
 
-#gap{
+#gap {
     width: 80px;
     height: 200px;
     background-color: aqua;
     position: relative;
-    left: 720px;
     top: -600px;
-    animation: fence 3s infinite linear;
+    left: 720px;
+    animation: fence 2s infinite linear;
+}
+
+#character {
+    position: absolute;
+    top: 100px;
+}
+
+img {
+    max-width: 70px;
 }
