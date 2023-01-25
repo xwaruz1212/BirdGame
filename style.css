@@ -4,19 +4,23 @@
     overflow: hidden;
 }
 
+body {
+    background-image: url(https://images.unsplash.com/photo-1564500617448-e541b1df7cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80);
+}
+
 #game {
     width: 800px;
     height: 800px;
     border: 3px solid black;
     margin: auto;
-    background-color: aqua;
+    background-color: rgb(1, 172, 228);
     overflow: hidden;
 }
 
 #block {
     height: 800px;
     width: 80px;
-    background-color: green;
+    background-color: brown;
     position: relative;
     left: 720px;
     animation: fence 2s infinite linear;
@@ -35,7 +39,7 @@
 #gap {
     width: 80px;
     height: 200px;
-    background-color: aqua;
+    background-color: rgb(1, 172, 228);
     position: relative;
     top: -600px;
     left: 720px;
