@@ -4,12 +4,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var block = document.getElementById("block");
     var gap = document.getElementById("gap");
     var character = document.getElementById("character")
+    var counter = 0;
 
     var flying = 0;
 
     gap.addEventListener("animationiteration", () => {
         var random = - ((Math.random() * 400) + 150);
         gap.style.top = random + "px";
+        counter++;
     })
 
     setInterval(function () {
@@ -17,7 +19,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (flying === 0) {
             character.style.top = (characterTop + 4) + "px";
         }
-        //console.log(characterTop)
+        if (characterTop > 760) {
+            alert("YOU KILLED THIS BIRD. SCORE: " + counter)
+            character.style.top = 100 + "px";
+            counter = 0;
+        }
+
     }, 10);
 
     function fly() {
