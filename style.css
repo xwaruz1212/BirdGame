@@ -9,51 +9,51 @@ body {
 }
 
 #game {
-    width: 800px;
-    height: 800px;
-    border: 3px solid black;
+    width: 600px;
+    height: 750px;
+    border: 1px solid black;
     margin: auto;
     background-color: rgb(1, 172, 228);
     overflow: hidden;
 }
 
 #block {
-    height: 800px;
-    width: 80px;
+    height: 750px;
+    width: 75px;
     background-color: brown;
     position: relative;
-    left: 720px;
+    left: 480px;
     animation: fence 2s infinite linear;
 }
 
 @keyframes fence {
     0% {
-        left: 800px
+        left: 480px
     }
 
     100% {
-        left: -100px
+        left: -75px
     }
 }
 
 #gap {
-    width: 80px;
-    height: 200px;
+    width: 75px;
+    height: 225px;
     background-color: rgb(1, 172, 228);
     position: relative;
-    top: -600px;
-    left: 720px;
+    top: -750px;
+    left: 480px;
     animation: fence 2s infinite linear;
 }
 
 #character {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    top: 200px;
+    top: 150px;
 }
 
 img {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 50px;
+    max-height: 50px;
 }
