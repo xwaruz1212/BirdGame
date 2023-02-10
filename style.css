@@ -22,13 +22,13 @@ body {
     width: 75px;
     background-color: brown;
     position: relative;
-    left: 480px;
+    left: 520px;
     animation: fence 2s infinite linear;
 }
 
 @keyframes fence {
     0% {
-        left: 480px
+        left: 520px
     }
 
     100% {
@@ -42,7 +42,7 @@ body {
     background-color: rgb(1, 172, 228);
     position: relative;
     top: -750px;
-    left: 480px;
+    left: 520px;
     animation: fence 2s infinite linear;
 }
 
