@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (flying === 0) {
             character.style.top = (characterTop + 4) + "px";
         }
-        if (characterTop > 760) {
-            alert("YOU KILLED THIS BIRD. SCORE: " + counter)
+        if (characterTop > 720) {
+            alert("YOU KILLED THIS BIRD. SCORE: " + (counter - 1))
             character.style.top = 100 + "px";
             counter = 0;
         }
@@ -33,10 +33,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         var flyInterval = setInterval(() => {
             var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-            if ((characterTop > 20) && (flyCount < 30)) {
-                character.style.top = (characterTop - 6) + "px"
+            if ((characterTop > 10) && (flyCount < 20)) {
+                character.style.top = (characterTop - 5) + "px"
             }
-            if (flyCount > 20) {
+            if (flyCount > 17) {
                 clearInterval(flyInterval);
                 flying = 0;
                 flyCount = 0;
