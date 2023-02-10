@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var flying = 0;
 
     gap.addEventListener("animationiteration", () => {
-        var random = - ((Math.random() * 400) + 150);
+        var random = - ((Math.random() * 450) + 225);
         gap.style.top = random + "px";
         counter++;
     })
@@ -17,15 +17,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     setInterval(function () {
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
         if (flying === 0) {
-            character.style.top = (characterTop + 4) + "px";
+            character.style.top = (characterTop + 5) + "px";
         }
-        if (characterTop > 720) {
+        var blockSide = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+        var gapTop = parseInt(window.getComputedStyle(gap).getPropertyValue("top"));
+        var cTop = -(750 - characterTop);
+        if ((characterTop > 720) || ((blockSide < 30) && (blockSide > -75) && ((cTop < gapTop) || (cTop > gapTop + 195)))) {
             alert("YOU KILLED THIS BIRD. SCORE: " + (counter - 1))
-            character.style.top = 100 + "px";
+            character.style.top = 150 + "px";
             counter = 0;
         }
 
-    }, 10);
+    }, 15);
 
     function fly() {
         flying = 1;
@@ -36,7 +39,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if ((characterTop > 10) && (flyCount < 20)) {
                 character.style.top = (characterTop - 5) + "px"
             }
-            if (flyCount > 17) {
+            if (flyCount > 15) {
                 clearInterval(flyInterval);
                 flying = 0;
                 flyCount = 0;
